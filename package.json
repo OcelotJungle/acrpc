@@ -1,0 +1,64 @@
+{
+  "name": "@ocelotjungle/acrpc",
+  "version": "0.1.0",
+  "description": "Just another custom RPC",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./core": {
+      "types": "./dist/core.d.ts",
+      "import": "./dist/core.mjs",
+      "require": "./dist/core.cjs"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "import": "./dist/client.mjs",
+      "require": "./dist/client.cjs"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.mjs",
+      "require": "./dist/server.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OcelotJungle/acrpc"
+  },
+  "author": "OcelotJungle",
+  "license": "MIT",
+  "keywords": [
+    "rpc",
+    "schema-first"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "2.3.13",
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.1.0",
+    "lefthook": "^2.0.16",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@ocelotjungle/case-converters": "^1.0.0",
+    "express": "^5.2.1",
+    "object-inspect": "^1.13.4",
+    "superjson": "^2.2.6",
+    "zod": "^4.3.6"
+  }
+}
